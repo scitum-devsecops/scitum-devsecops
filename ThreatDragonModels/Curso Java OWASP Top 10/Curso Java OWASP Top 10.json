@@ -10,7 +10,361 @@
       {
         "title": "Modulo A2",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 57,
+                "y": 54
+              },
+              "angle": 0,
+              "id": "d22d1027-7d69-4221-b250-7541d5f6342a",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Usuario"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 501,
+                "y": 12
+              },
+              "angle": 0,
+              "id": "c79bc92d-83fc-4ddb-9584-4a6c6470605d",
+              "z": 2,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Iniciar sesión"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "d22d1027-7d69-4221-b250-7541d5f6342a"
+              },
+              "target": {
+                "id": "c79bc92d-83fc-4ddb-9584-4a6c6470605d"
+              },
+              "vertices": [
+                {
+                  "x": 372,
+                  "y": 32
+                }
+              ],
+              "id": "f10e4c41-01c3-413c-90ad-bb1c30780214",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Envio de credenciales",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": false,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "c79bc92d-83fc-4ddb-9584-4a6c6470605d"
+              },
+              "target": {
+                "id": "d22d1027-7d69-4221-b250-7541d5f6342a"
+              },
+              "vertices": [
+                {
+                  "x": 318,
+                  "y": 129
+                }
+              ],
+              "id": "2d6082dc-f20b-4851-ad53-44edd062d55b",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Respuesta de\nautenticación",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 751,
+                "y": 153
+              },
+              "angle": 0,
+              "id": "895c8809-c52f-465d-a190-7b1815279010",
+              "z": 5,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Base de datos"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "c79bc92d-83fc-4ddb-9584-4a6c6470605d"
+              },
+              "target": {
+                "id": "895c8809-c52f-465d-a190-7b1815279010"
+              },
+              "vertices": [],
+              "id": "799ec0ba-ee78-463b-958e-d2a42929e7dd",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Consulta de usuario",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 6,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 434,
+                "y": 2
+              },
+              "target": {
+                "x": 465,
+                "y": 129
+              },
+              "vertices": [
+                {
+                  "x": 421,
+                  "y": 67
+                }
+              ],
+              "id": "0e11fc69-3f6c-4014-93b2-1084a5d6ce2d",
+              "z": 7,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 426,
+                "y": 232
+              },
+              "angle": 0,
+              "id": "7df2f3a6-be00-47b8-ab2d-3a508dc0241f",
+              "z": 9,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Recuperar\ncontraseña"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "d22d1027-7d69-4221-b250-7541d5f6342a"
+              },
+              "target": {
+                "id": "7df2f3a6-be00-47b8-ab2d-3a508dc0241f"
+              },
+              "vertices": [],
+              "id": "f8a04a1b-5fd1-41a4-b288-9ae3be3cf651",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Envio de correo\nelectrónico",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 10,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "7df2f3a6-be00-47b8-ab2d-3a508dc0241f"
+              },
+              "target": {
+                "id": "d22d1027-7d69-4221-b250-7541d5f6342a"
+              },
+              "vertices": [
+                {
+                  "x": 278,
+                  "y": 283
+                }
+              ],
+              "id": "6fc97a68-4d33-4552-9b92-68f423150285",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Respuesta de\nconfirmación /\nrechazo",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 11,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "7df2f3a6-be00-47b8-ab2d-3a508dc0241f"
+              },
+              "target": {
+                "id": "895c8809-c52f-465d-a190-7b1815279010"
+              },
+              "vertices": [],
+              "id": "73c0a3d5-6186-49a1-8481-c237d20d6271",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Consulta de usuario",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 12,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 2198.2578125
+        }
       }
     ],
     "reviewer": "Carlos Cuevas"
