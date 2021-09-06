@@ -20,8 +20,8 @@
                 "height": 80
               },
               "position": {
-                "x": 57,
-                "y": 54
+                "x": 54,
+                "y": 59
               },
               "angle": 0,
               "id": "d22d1027-7d69-4221-b250-7541d5f6342a",
@@ -52,16 +52,53 @@
               "angle": 0,
               "id": "c79bc92d-83fc-4ddb-9584-4a6c6470605d",
               "z": 2,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Fuerza Bruta/Diccionario",
+                  "type": "Spoofing",
+                  "description": "Un atacante podría obtener credenciales por medio de ataques de fuerza bruta o diccionario."
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "title": "Evasión de autenticación",
+                  "description": "Un atacante podría evadir el mecanismo de autenticación por medio de la manipulación de parámetros y la lógica de negocio de la aplicación."
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "title": "Alteración de datos",
+                  "description": "Un atacante podría introducir ciertos caracteres especiales para manipular los interpretes internos de la aplicación y afectar la integridad de ciertos datos, como: manipular consultas SQL para registrar, modificar o eliminar información."
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "title": "Acceso a cuenta admin",
+                  "description": "Un usuario podría acceder a una cuenta de usuario administrador por medio de la identificación de la cuenta administrador y la evasión de la autenticación."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "Enumeración de usuarios",
+                  "description": "Un atacante podría identificar cuentas de usuario válidas de la aplicación, debido a que ésta muestra mensajes de error específicos cuando un usuario esta registrado o no en la aplicación."
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Iniciar sesión"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -407,18 +444,232 @@
                 "y": 179
               },
               "target": {
-                "x": 702,
-                "y": 290
+                "x": 712,
+                "y": 301
               },
               "vertices": [
                 {
                   "x": 654,
                   "y": 242
+                },
+                {
+                  "x": 676,
+                  "y": 276
                 }
               ],
               "id": "12a65e60-da12-4776-8d9d-0d4ad63d9f80",
               "z": 15,
               "attrs": {}
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 201,
+                "y": 443
+              },
+              "angle": 0,
+              "id": "8bf2bdcd-d1e4-4cb1-b9c8-2c1c75e2e24d",
+              "z": 16,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Es un servicio fuera del sirtema",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "Servicio de Correo\nelectrónico"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "895c8809-c52f-465d-a190-7b1815279010"
+              },
+              "target": {
+                "id": "7df2f3a6-be00-47b8-ab2d-3a508dc0241f"
+              },
+              "vertices": [
+                {
+                  "x": 635,
+                  "y": 311
+                }
+              ],
+              "id": "de99778b-233f-4a95-af53-3cf2656d8979",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Envío de contraseña",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 17,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "7df2f3a6-be00-47b8-ab2d-3a508dc0241f"
+              },
+              "target": {
+                "id": "8bf2bdcd-d1e4-4cb1-b9c8-2c1c75e2e24d"
+              },
+              "vertices": [
+                {
+                  "x": 430,
+                  "y": 392
+                }
+              ],
+              "id": "d62197a7-afe6-4cf1-ba1f-bf603a7bc629",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Envío de contraseña",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
+              "hasOpenThreats": false,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 376,
+                "y": 336
+              },
+              "target": {
+                "x": 510,
+                "y": 369
+              },
+              "vertices": [
+                {
+                  "x": 430,
+                  "y": 376
+                }
+              ],
+              "id": "49bf3e11-a6f4-409a-8fed-a0d6df947b13",
+              "z": 19,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "d22d1027-7d69-4221-b250-7541d5f6342a"
+              },
+              "target": {
+                "id": "8bf2bdcd-d1e4-4cb1-b9c8-2c1c75e2e24d"
+              },
+              "vertices": [
+                {
+                  "x": 73,
+                  "y": 333
+                }
+              ],
+              "id": "275a655c-d4a5-488e-9dba-4a74e871975a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Consulta correo\nelectrónico",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 20,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Es un flujo fuera del sistema.",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8bf2bdcd-d1e4-4cb1-b9c8-2c1c75e2e24d"
+              },
+              "target": {
+                "id": "d22d1027-7d69-4221-b250-7541d5f6342a"
+              },
+              "vertices": [
+                {
+                  "x": 181,
+                  "y": 317
+                }
+              ],
+              "id": "5129521a-2d48-4a79-97dd-9c6b65d28a2c",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Obtiene contraseña\nde correo electrónico",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 21,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Es un flujo fuera del sistema.",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
             }
           ]
         },
